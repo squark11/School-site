@@ -1,0 +1,854 @@
+body{
+	font-family: 'diavlobook';
+	margin:0; /* margines zewnętrzny na każdą ze stron = 0px */
+	background:#fff url(../images/bg/bg.jpg) no-repeat top center;
+	
+}
+strong
+{
+	font-weight:normal;
+}
+body > div{
+	display:none;
+}
+.center{
+	width:96%;
+	max-width:1150px;
+	margin:0 auto;
+	padding:0 2%;
+} 
+.aligneRight{
+	text-align:right;
+}
+.aligneCenter{
+	text-align:center;
+}
+.aligneLeft{
+	text-align:left;
+}
+
+.changeInline{
+	display:inline-block;
+	vertical-align:middle;
+}
+
+a{
+	text-decoration:none;
+}
+
+ul{
+	margin:0;
+	padding:0;
+	list-style:none; /*usuwa znaczniki z listy ul*/
+	
+}
+
+.flexBlock{
+	display: flex;
+	justify-content: space-between; /*rozmieszczenie po krawędziach ??? DZIAŁA TYLKO Z ELEMENTAMI FLEX*/
+	align-items: center;/*wyśrodkowanie w pionie ??? DZIAŁA TYLKO Z ELEMENTAMI FLEX*/
+}
+a,img,:before,:after,li,
+body > header nav > a.mobileMenu strong,
+body > header nav > strong.shadow,
+nav ul.flexBlock,
+body > section .slider
+{
+	-webkit-transition: all 200ms linear;
+-moz-transition: all 200ms linear;
+-ms-transition: all 200ms linear;
+-o-transition: all 200ms linear;
+transition: all 200ms linear;
+}
+h2.headerBoxText
+{
+	margin:0 0 30px;
+	font:28px diavloblack;
+	color:#224e60;
+	text-transform:uppercase;
+	position:relative;
+}
+
+h2.headerBoxText strong{
+	padding-right:23px;
+	z-index:2;
+	background:#fff;
+}
+h2.headerBoxText:after{
+	width:100%;
+	height:1px;
+	position:absolute;
+	display:block;
+	content:"";
+	background:#f1f1f1;
+}
+/* top - header */
+body > header .top{
+	border-bottom:1px solid #2c434c;
+	color:#f5f5f5;
+}
+
+body > header .top p{
+	margin:0;
+	font-size:14px;
+	text-transform:uppercase; /*ustala DUŻE LITERY dla tekstu*/
+}
+body > header .top ul{
+	padding:21px 0;
+}
+body > header .top ul li+li/* li+li działa tylko na li mające li po prawej stronie */{
+	margin-left:27px; 
+}
+body > header .top ul li a{
+	color:#f5f5f5
+}
+body > header .top ul li a:hover{
+	color:#f7d137;
+}
+body > header .top ul li:before/*pseudo element*/{
+	content:"";/*należy to użyć przy before i after*/
+	width:15px;
+	height:19px;
+	display:inline-block;/*używac zawsze przy elementach before i after*/
+	vertical-align:top;
+	margin:1px 13px 0 0;
+	background:url(../images/icons/place-holder.png) no-repeat center;
+}
+body > header .top ul li.phone:before/*dodanie odnośnika do diva ".phone" pomaga z optymalizować kod w cssie*/{
+	background:url(../images/icons/phone.png) no-repeat center;
+	width:19px;
+}
+
+/*bottom - header */
+body > header .bottom{
+	padding:33px 2%;
+}
+
+body > header .bottom .leftBlock ul,
+body .stopka .leftBlock ul{
+	display:inline-flex;
+}
+body > header .bottom .leftBlock ul li a:hover img,
+body .stopka .copyright .leftBlock  ul li a:hover img{
+	opacity:0.85;
+}
+body > header .bottom .leftBlock ul li+li,
+body .stopka .leftBlock ul li+li{
+	margin-left: 18px;
+}
+body > header .bottom .leftBlock ul:before,
+body .stopka .leftBlock ul:after{
+	content:"";
+	display:inline-block;
+	width:1px;
+	height:39px;
+	vertical-align:middle;
+	background:#2c434c;
+	margin:0 23px;
+}
+body > header nav ul li a,
+body > section .slider .tekst a,
+body > section .aboutus .rightBlock a,
+body > section .infoBox .flexBlock .leftBlock a.cos{
+	color:#fff;
+	padding:14px 16px;
+	display:inline-block;
+	text-transform:lowercase;
+	-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+}
+body > header nav ul li a:hover,
+body > section .slider .tekst a,
+body > header nav ul li.active a{
+	background:#d63a52;
+}
+body > header nav ul li+li{
+	margin-left:12px;
+}
+body > header nav ul li:first-child a{
+	font-size:0;
+	padding:13px 16px;
+}
+body > header nav ul li:first-child a:before{
+	content:"";
+	display:inline-block;
+	width:20px;
+	height:18px;
+	background:url(../images/icons/home.png) no-repeat center;
+}
+/*slider-section*/
+body > section .slider{
+	background:url(../images/slider/student.png) no-repeat right bottom;
+	height:576px;
+	margin-top: -73px;
+}
+body > section .slider .tekst{
+	width:50%;
+	color:#fff;
+}
+body > section .slider .tekst h1 {
+	font:50px diavloblack;
+	margin:0;
+}
+body > section .slider .tekst h1 strong{
+	color:#3ad6a1;
+}
+body > section .slider .tekst p{
+	color:#dee7ea;
+	margin:30px 0;
+	line-height:1.5em;
+}
+body > section .slider .tekst a,
+body > section .aboutus .rightBlock a{
+	font-size:14px;
+	padding:20px 57px;
+}
+body > section .slider .tekst a:hover{
+	background:#c32840;
+}
+body > section .aboutus .video{
+	
+}
+/*aboutus - section */
+body > section .aboutus{
+	margin-top:20px;
+}
+body > section .aboutus .leftBlock{
+	width:44%;
+}
+body > section .aboutus .leftBlock a{
+	background:url(../images/menu/video_bg.jpg) no-repeat center;
+	background-size:cover;
+	height:300px;
+	text-align:center;
+	justify-content: center;
+	position:relative;
+}
+
+body > section .aboutus .leftBlock a strong{
+	font-family:diavloblack;
+	color:#fff;
+	z-index:2;
+}
+body > section .aboutus .leftBlock a strong:before{
+	content:"";
+	display:block;
+	margin:0 auto 13px;
+	width:51px;
+	height:51px;
+	background:url(../images/icons/video.png) no-repeat center;
+}
+body > section .aboutus .leftBlock a:after{
+	content:"";
+	background:rgba(45,100,121,0.66);
+	display:block;
+	position:absolute;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+}
+body > section .aboutus .leftBlock a:hover:after/*hover nie działa na aftera jeżeli (:after:hover)*/{
+	background:rgba(28, 82, 103, 0.66);
+}
+body > section .aboutus .rightBlock{
+	width:52%;
+}
+body > section .aboutus .rightBlock p,
+body > section .schoolBox .top .leftBlock .bottomLine p,
+body > section .schoolBox .bottom .width50 p{
+	margin:0;
+	color:#425f6b;
+	line-height:1.8em;
+}
+body > section .aboutus .rightBlock p+p{
+	margin-top:25px;
+}
+body > section .aboutus .rightBlock a{
+background:#0295aa;
+margin-top:41px;
+}
+body > section .aboutus .rightBlock a:hover{
+	background:#026573;
+}
+/* list ofer - section*/
+body > section .offerBox{
+	margin-top:30px;
+}
+body > section .offerBox a{
+	justify-content:center;
+	height:280px;
+}
+body > section .offerBox li{
+	width:25%;
+}
+body > section .offerBox li:nth-child(odd) a{
+	background:#f6f6f6;
+}
+body > section .offerBox a strong.text{
+	margin-top:25px;
+}
+body > section .offerBox a strong.text,
+body > section .offerBox a strong.text strong,
+body > section .infoBox .leftBlock a strong.text,
+body > section .infoBox .leftBlock a strong.text strong{
+	display:block;
+}
+body > section .offerBox a{
+	color:#0b3343;
+	font-size:18x;
+	background:#fbfbfb;
+}
+body > section .offerBox a strong.text strong{
+	font-family:diavloblack;
+}
+/*dół*/
+body > section .schoolBox{
+	min-height:450px;
+	margin-top:91px;
+}
+body > section .schoolBox .top{
+	position:absolute;
+	width:100%;
+	overflow:hidden;
+	clear:both;
+}
+body > section .schoolBox .top > div{
+ width:50%;
+}
+
+body > section .schoolBox .top .leftBlock{
+	height:320px;
+	background:#272727;
+	float:left;
+}
+body > section .schoolBox .top .leftBlock .bottomLine{
+    width: 28%;
+    float: left;
+    position: absolute;
+    text-align: justify;
+    margin-top: 39px;
+    margin-left: 18%;
+}
+body > section .schoolBox .top .leftBlock .bottomLine h2.headerBoxText strong{
+	background:#272727;
+	color:#fff;
+}
+body > section .schoolBox .top .leftBlock .bottomLine h2.headerBoxText{
+	margin: 0 0 33px 0;
+}
+body > section .schoolBox .top .leftBlock .bottomLine h2.headerBoxText:after{
+	width: 100%;
+	background:#3f3f3f;
+}
+body > section .schoolBox .top .rightBlock{
+	height:450px;
+	float:right;
+	background:url(../images/menu/school.jpg) no-repeat top left;
+	background-size:cover;
+	z-index:5;
+}
+body > section .schoolBox .bottom {
+    position: relative;
+	
+}
+body > section .schoolBox .bottom .width50 p{
+	color:#8b8b8b;
+}
+body > section .schoolBox .bottom .width50{
+	width:43%;
+	top: 219px;
+	position: relative;
+	background:#1f1f1f;
+	padding:41px 28px;
+}
+
+body > section .schoolBox .top .leftBlock .bottomLine p{
+	color:#8b8b8b;
+}
+/*infoBox*/
+body > section .infoBox{
+	width:90%;
+	max-width:1150px;
+	margin-top:90px;
+	text-align:center;
+}
+body > section .infoBox .flexBlock .leftBlock{
+	width:40%;
+	max-width:350px;
+}
+body > section .infoBox .leftBlock .image a{
+	background:url(../images/menu/beach.jpg) no-repeat center;
+	background-size:cover;
+	height:172px;
+	text-align:center;
+	justify-content: center;
+	position:relative;
+}
+
+body > section .infoBox .leftBlock .image a.span{
+	font-family:diavloblack;
+	color:#fff;
+	z-index:2;
+	width:auto;
+}
+body > section .infoBox .leftBlock .image a.span h3{
+	font-size:25px;
+}
+body > section .infoBox .leftBlock .image a.span:before{
+	content:"";
+	display:block;
+	width:28px;
+	height:3px;
+	background:#fbba00;
+	position:relative;
+	top:37px;
+	left:46%;
+}
+body > section .infoBox .flexBlock .leftBlock .image a:after{
+	content:"";
+	background:rgba(45,100,121,0.66);
+	display:block;
+	position:absolute;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+}
+body > section .infoBox .flexBlock .leftBlock .image a:hover:after{
+	background:rgba(9, 28, 35, 0.66);
+}
+body > section .infoBox .flexBlock .leftBlock .info{
+	text-align:center;
+	margin-top:20px;
+}
+body > section .infoBox .flexBlock .leftBlock a.cos{
+	border:3px solid #d63a52;
+	margin-top:20px;
+	color:#d63a52;
+	width:190px;
+}
+body > section .infoBox .flexBlock .leftBlock a.cos:hover{
+	background:#d63a52;
+	color:#fff;
+}
+/*stopka*/
+body .stopka{
+	width:100%;
+	margin-top:150px;
+	height:150px;
+	background:#282828;
+	bottom:0;
+}
+body .stopka .copyright{
+	color:white;
+	justify-content:middle;
+}
+body .stopka .copyright span{
+	text-align:center;
+	display:block;
+	width:100%;
+	height:100%;
+	font-size:14px;
+	justify-content:center;
+}
+body .stopka .copyright .leftBlock {
+	position:relative;
+	display:inline-block;	
+}
+body .stopka .copyright strong a{
+	color:#fff;
+}
+/***********************************/
+/*menu mobile*/
+body> header nav> a.mobileMenu{
+	display:none;
+	z-index:101;
+	position:relative;
+	color:#fff;
+	text-transform:uppercase;
+	font-family:diavloblack;
+}
+body> header nav> a.mobileMenu strong{
+	display:inline-block;
+	position:relative;
+	margin-left:15px;
+	top:-5px;
+	height:3px;
+	width:25px;
+	background:#fff;
+}
+body> header nav> a.mobileMenu strong:before,
+body> header nav> a.mobileMenu strong:after{
+	height:3px;
+	content:"";
+	width:25px;
+	background:#fff;
+	position:absolute;
+	left:0;
+	display:inline-block;
+	margin:-7px 0 0 ;
+}
+body> header nav> a.mobileMenu strong:after{
+	margin:7px 0 0 ;
+}
+body> header nav.active> a.mobileMenu strong:before{
+	margin:0;
+	-moz-transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+
+body> header nav.active> a.mobileMenu strong:after{
+	margin:0;
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+body> header nav.active> a.mobileMenu{
+	padding-right:25px;
+}
+body> header nav.active> a.mobileMenu strong{
+	width:0;
+	
+}
+
+
+
+/***********************************/
+/*rwd*/
+@media all and (max-width:1210px){
+	body> section .slider{
+		background:transparent;
+		
+	}
+	body> section .slider .tekst{
+		width:90%;
+		padding:0 5%;
+		text-align:center;
+	}
+	body> section .slider .tekst p{
+		max-width:700px;
+		margin:30px auto;
+	}
+	body > section .schoolBox .top .leftBlock .bottomLine {
+		margin-left:4%;
+	}
+	body > section .infoBox {
+		flex-direction:column;
+	}
+	body .stopka .copyright span {
+		font-size:12px;
+		margin-right:10px;
+	}
+	body > section .aboutus .rightBlock{
+		font-size:13px;
+	}
+	body > section .infoBox .leftBlock{
+		padding-right:10px;
+	}
+}
+@media all and (max-width:920px){
+	body > section .schoolBox .top .rightBlock{
+		display:none;
+	}
+	body > section .schoolBox .bottom .width50{
+		    width: 80%;
+			margin:0 auto;
+			padding: 4vw 28px;
+			top: 255px;
+	}
+	body > section .schoolBox .top > div{
+		    width: 100%;
+	}
+	
+	body > section .schoolBox .bottom{
+		width: 80%;
+	}
+	body> header nav> span.shadow{
+	position:fixed;
+	display:block;
+	opacity:0;
+	z-index:-100;
+	background:rgba(0,0,0,.9);
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+	
+	}
+	body> header nav.active> span.shadow:hover{
+		cursor:pointer;
+		background:rgba(0,0,0,0.4);
+	}
+	h2.headerBoxText{
+			justify-content: center;
+	}
+	h2.headerBoxText strong{
+		padding:0 20px;
+	}
+	body> header nav.active> span.shadow{
+		z-index:100;
+		opacity:1;
+	}
+	body > section .schoolBox .top .leftBlock .bottomLine{
+			width: 90vw;
+		margin-left: 3%;
+	}
+	body > section .infoBox{
+		width: 96%;
+	}
+	@media all and (max-width:920px){
+	body > header nav ul li:first-child a{
+		padding:12px 7px;
+	}
+	body > header nav ul li a{
+		padding:12px 7px;
+	}
+	body > section .infoBox .leftBlock{
+		padding-bottom:15px;
+		padding-right:0;
+	}
+	body > section .infoBox .flexBlock{
+		flex-direction: column;
+		justify-content: center;
+	}
+	body > section .infoBox .leftBlock{
+		    width: 100%;
+			max-width:none;
+	}
+
+/*@media all and (max-width:830px){*/
+	nav ul.flexBlock{
+		opacity:0;
+		z-index:-101;
+		position:absolute;
+		width:92%;
+		left:2%;
+		right:2%;
+		margin-top:40px;
+		text-align:center;
+		padding:20px 2%;
+		-moz-transform: translateY(-1000px);
+		-webkit-transform: translateY(-1000px);
+		-o-transform: translateY(-1000px);
+		-ms-transform: translateY(-1000px);
+		transform: translateY(-1000px);
+	}
+	nav ul.flexBlock a{
+		display:block;
+		padding:25px 0;
+	}
+	nav ul.flexBlock a:hover,
+	body > header nav ul li.active a{
+		background:#f7d137;
+		color: #0f3794;
+	}
+	body > header nav ul li.active a{
+		font-weight: 700;
+	}
+	body > header nav ul li:first-child a{
+		font-size:18px;
+		padding:25px 0;
+	}
+	body > header nav ul li:first-child a:before{
+		display:none;
+	}
+	body > header nav ul li+li{
+		margin:12px 0 0 0;
+	}
+	body > header nav ul li+li:before{
+		content:"";
+		display:block;
+		width:100%;
+		height:1px;
+		background:#4a4a4a;
+	}
+	nav.active ul.flexBlock{
+		background: rgba(8, 16, 24, 0.9);
+		display:block;
+		opacity:1;
+		z-index:101;
+		-moz-transform: translateY(0px);
+		-webkit-transform: translateY(0px);
+		-o-transform: translateY(0px);
+		-ms-transform: translateY(0px);
+		transform: translateY(0px);
+	}
+	body > header nav ul li:first-child a{
+		margin:12px 0px;
+	}
+	body > header nav ul li a{
+		padding:12px 3px;
+	}
+	body > header nav > a.mobileMenu{
+		display:inline-block;
+	}
+	body > header nav ul li a{
+		display:none;
+	}
+	body > header nav > strong.shadow{
+		position:fixed;
+		display:block;
+		opacity:0;
+		z-index:-100;
+		background:rgba(0,0,0,0.5);
+		left:0;
+		right:0;
+		top:0;
+		bottom:0;
+	}
+	body > header nav.active > strong.shadow{
+		z-index:100;
+		opacity:1;
+	}
+	body > header nav.active > strong.shadow:hover{
+		background:rgba(0,0,0,0.35);
+		cursor:pointer;
+	}
+	body > section .offerBox{
+		display:block;
+		width:80%;
+	}
+	body > section .offerBox li{
+		display:inline-block;
+		width:45%;
+		margin:5px;
+	}
+	body > section .aboutus{
+		display:block;
+	}
+	body > section .aboutus .leftBlock{
+		margin:0 auto 20px;
+		width:100%;
+	}
+	body > section .aboutus .rightBlock{
+		margin:0 auto;
+		width:80%;
+	}
+	body > section .infoBox .leftBlock{
+		display:block;
+	}
+	body > section .infoBox .leftBlock .cos{
+		margin:0 auto 50px;
+		width:80%;
+	}
+	body > section .infoBox .leftBlock .image a{
+		height:300px;
+	}
+}
+	
+@media all and (max-width:730px){
+	body > header .top p{
+		display:none;
+	}
+	body > header .top ul{
+		width:96%;
+		justify-content: space-around;
+	}
+	body > section .offerBox{
+		display:block;
+		width:96%;
+	}
+	body > section .offerBox li{
+		display:inline-block;
+		width:45%;
+		margin:5px;
+	}
+	body .stopka .copyright h4{
+		font-size:10px;
+	}
+}
+	
+	
+}
+@media all and (max-width:470px){
+	
+	body > section .schoolBox{
+		margin-top:0;
+	}
+	body > header .bottom .leftBlock ul{
+	display:none;
+	}
+	body section .slider .tekst h1{
+		font-size:25px;
+		
+	}
+	body section .slider .tekst{
+		font-size:14px;
+	}
+
+	body> header .bottom {
+		padding:5px 0;
+	}
+	body> section .aboutus .rightBlock{
+		font-size:13px;
+		width:90%;
+	}
+		body > section .aboutus .rightBlock p{
+		text-align:center;
+	}
+	body> section .offerBox {
+		justify-content:column;
+	}
+	body > section .schoolBox .top .leftBlock .bottomLine h2.headerBoxText strong{
+		font-size:5vw;
+	}
+	body > section .schoolBox .bottom .width50 p {
+		font-size:13px;;
+	}
+	body > section .schoolBox .top .leftBlock .bottomLine {
+	    font-size: 4vw;
+	}
+	body > section .schoolBox .top .rightBlock {
+		background:none;
+	}
+	body > section .infoBox {
+		flex-direction:column;
+	}
+	body > section .offerBox li{
+		display:inline;
+	}
+}
+
+@media all and (max-width:450px){
+	body > header .bottom .leftBlock a img{
+		width:45vw;
+	}
+}
+@media all and (max-width:400px){
+	body > header .top ul li.address{
+	display:none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
