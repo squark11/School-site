@@ -2,15 +2,8 @@ body{
 	font-family: 'diavlobook';
 	margin:0; /* margines zewnętrzny na każdą ze stron = 0px */
 	background:#fff url(../images/bg/bg.jpg) no-repeat top center;
-	
 }
-strong
-{
-	font-weight:normal;
-}
-body > div{
-	display:none;
-}
+
 .center{
 	width:96%;
 	max-width:1150px;
@@ -49,8 +42,8 @@ ul{
 	align-items: center;/*wyśrodkowanie w pionie ??? DZIAŁA TYLKO Z ELEMENTAMI FLEX*/
 }
 a,img,:before,:after,li,
-body > header nav > a.mobileMenu strong,
-body > header nav > strong.shadow,
+body > header nav > a.mobileMenu span,
+body > header nav > span.shadow,
 nav ul.flexBlock,
 body > section .slider
 {
@@ -69,7 +62,7 @@ h2.headerBoxText
 	position:relative;
 }
 
-h2.headerBoxText strong{
+h2.headerBoxText span{
 	padding-right:23px;
 	z-index:2;
 	background:#fff;
@@ -159,18 +152,17 @@ body > section .infoBox .flexBlock .leftBlock a.cos{
 border-radius: 10px;
 }
 body > header nav ul li a:hover,
-body > section .slider .tekst a,
-body > header nav ul li.active a{
+body > section .slider .tekst a{
 	background:#d63a52;
 }
 body > header nav ul li+li{
 	margin-left:12px;
 }
-body > header nav ul li:first-child a{
+body > header nav ul li.home a{
 	font-size:0;
 	padding:13px 16px;
 }
-body > header nav ul li:first-child a:before{
+body > header nav ul li.home a:before{
 	content:"";
 	display:inline-block;
 	width:20px;
@@ -191,7 +183,7 @@ body > section .slider .tekst h1 {
 	font:50px diavloblack;
 	margin:0;
 }
-body > section .slider .tekst h1 strong{
+body > section .slider .tekst h1 span{
 	color:#3ad6a1;
 }
 body > section .slider .tekst p{
@@ -226,12 +218,12 @@ body > section .aboutus .leftBlock a{
 	position:relative;
 }
 
-body > section .aboutus .leftBlock a strong{
+body > section .aboutus .leftBlock a span{
 	font-family:diavloblack;
 	color:#fff;
 	z-index:2;
 }
-body > section .aboutus .leftBlock a strong:before{
+body > section .aboutus .leftBlock a span:before{
 	content:"";
 	display:block;
 	margin:0 auto 13px;
@@ -286,13 +278,13 @@ body > section .offerBox li{
 body > section .offerBox li:nth-child(odd) a{
 	background:#f6f6f6;
 }
-body > section .offerBox a strong.text{
+body > section .offerBox a span.text{
 	margin-top:25px;
 }
-body > section .offerBox a strong.text,
-body > section .offerBox a strong.text strong,
-body > section .infoBox .leftBlock a strong.text,
-body > section .infoBox .leftBlock a strong.text strong{
+body > section .offerBox a span.text,
+body > section .offerBox a span.text strong,
+body > section .infoBox .leftBlock a span.text,
+body > section .infoBox .leftBlock a span.text strong{
 	display:block;
 }
 body > section .offerBox a{
@@ -300,7 +292,7 @@ body > section .offerBox a{
 	font-size:18x;
 	background:#fbfbfb;
 }
-body > section .offerBox a strong.text strong{
+body > section .offerBox a span.text strong{
 	font-family:diavloblack;
 }
 /*dół*/
@@ -315,7 +307,7 @@ body > section .schoolBox .top{
 	clear:both;
 }
 body > section .schoolBox .top > div{
- width:50%;
+ width:48%;
 }
 
 body > section .schoolBox .top .leftBlock{
@@ -324,14 +316,11 @@ body > section .schoolBox .top .leftBlock{
 	float:left;
 }
 body > section .schoolBox .top .leftBlock .bottomLine{
-    width: 28%;
-    float: left;
-    position: absolute;
     text-align: justify;
     margin-top: 39px;
-    margin-left: 18%;
+    margin-left: 26%;
 }
-body > section .schoolBox .top .leftBlock .bottomLine h2.headerBoxText strong{
+body > section .schoolBox .top .leftBlock .bottomLine h2.headerBoxText span{
 	background:#272727;
 	color:#fff;
 }
@@ -374,7 +363,7 @@ body > section .infoBox{
 	margin-top:90px;
 	text-align:center;
 }
-body > section .infoBox .flexBlock .leftBlock{
+body > section .infoBox .leftBlock{
 	width:40%;
 	max-width:350px;
 }
@@ -387,16 +376,16 @@ body > section .infoBox .leftBlock .image a{
 	position:relative;
 }
 
-body > section .infoBox .leftBlock .image a.span{
+body > section .infoBox .leftBlock a .span{
 	font-family:diavloblack;
 	color:#fff;
 	z-index:2;
 	width:auto;
 }
-body > section .infoBox .leftBlock .image a.span h3{
+body > section .infoBox .leftBlock a .span h3{
 	font-size:25px;
 }
-body > section .infoBox .leftBlock .image a.span:before{
+body > section .infoBox .leftBlock a .span:before{
 	content:"";
 	display:block;
 	width:28px;
@@ -406,7 +395,7 @@ body > section .infoBox .leftBlock .image a.span:before{
 	top:37px;
 	left:46%;
 }
-body > section .infoBox .flexBlock .leftBlock .image a:after{
+body > section .infoBox .leftBlock .image a:after{
 	content:"";
 	background:rgba(45,100,121,0.66);
 	display:block;
@@ -416,7 +405,7 @@ body > section .infoBox .flexBlock .leftBlock .image a:after{
 	top:0;
 	bottom:0;
 }
-body > section .infoBox .flexBlock .leftBlock .image a:hover:after{
+body > section .infoBox .leftBlock .image a:hover:after{
 	background:rgba(9, 28, 35, 0.66);
 }
 body > section .infoBox .flexBlock .leftBlock .info{
@@ -445,7 +434,7 @@ body .stopka .copyright{
 	color:white;
 	justify-content:middle;
 }
-body .stopka .copyright span{
+body .stopka .copyright h4{
 	text-align:center;
 	display:block;
 	width:100%;
@@ -457,7 +446,7 @@ body .stopka .copyright .leftBlock {
 	position:relative;
 	display:inline-block;	
 }
-body .stopka .copyright strong a{
+body .stopka .copyright h4 a{
 	color:#fff;
 }
 /***********************************/
@@ -470,7 +459,7 @@ body> header nav> a.mobileMenu{
 	text-transform:uppercase;
 	font-family:diavloblack;
 }
-body> header nav> a.mobileMenu strong{
+body> header nav> a.mobileMenu span{
 	display:inline-block;
 	position:relative;
 	margin-left:15px;
@@ -479,8 +468,8 @@ body> header nav> a.mobileMenu strong{
 	width:25px;
 	background:#fff;
 }
-body> header nav> a.mobileMenu strong:before,
-body> header nav> a.mobileMenu strong:after{
+body> header nav> a.mobileMenu span:before,
+body> header nav> a.mobileMenu span:after{
 	height:3px;
 	content:"";
 	width:25px;
@@ -490,10 +479,10 @@ body> header nav> a.mobileMenu strong:after{
 	display:inline-block;
 	margin:-7px 0 0 ;
 }
-body> header nav> a.mobileMenu strong:after{
+body> header nav> a.mobileMenu span:after{
 	margin:7px 0 0 ;
 }
-body> header nav.active> a.mobileMenu strong:before{
+body> header nav.active> a.mobileMenu span:before{
 	margin:0;
 	-moz-transform: rotate(-45deg);
 	-webkit-transform: rotate(-45deg);
@@ -503,7 +492,7 @@ body> header nav.active> a.mobileMenu strong:before{
 }
 
 
-body> header nav.active> a.mobileMenu strong:after{
+body> header nav.active> a.mobileMenu span:after{
 	margin:0;
 	-moz-transform: rotate(45deg);
 	-webkit-transform: rotate(45deg);
@@ -514,7 +503,7 @@ body> header nav.active> a.mobileMenu strong:after{
 body> header nav.active> a.mobileMenu{
 	padding-right:25px;
 }
-body> header nav.active> a.mobileMenu strong{
+body> header nav.active> a.mobileMenu span{
 	width:0;
 	
 }
@@ -532,13 +521,16 @@ body> header nav.active> a.mobileMenu strong{
 		width:90%;
 		padding:0 5%;
 		text-align:center;
+		
 	}
+
 	body> section .slider .tekst p{
 		max-width:700px;
 		margin:30px auto;
 	}
 	body > section .schoolBox .top .leftBlock .bottomLine {
-		margin-left:4%;
+    margin-left: 4%;
+
 	}
 	body > section .infoBox {
 		flex-direction:column;
@@ -549,9 +541,6 @@ body> header nav.active> a.mobileMenu strong{
 	}
 	body > section .aboutus .rightBlock{
 		font-size:13px;
-	}
-	body > section .infoBox .leftBlock{
-		padding-right:10px;
 	}
 }
 @media all and (max-width:920px){
@@ -565,7 +554,7 @@ body> header nav.active> a.mobileMenu strong{
 			top: 255px;
 	}
 	body > section .schoolBox .top > div{
-		    width: 100%;
+		    width: 96%;
 	}
 	
 	body > section .schoolBox .bottom{
@@ -582,30 +571,29 @@ body> header nav.active> a.mobileMenu strong{
 	top:0;
 	bottom:0;
 	
-	}
-	body> header nav.active> span.shadow:hover{
-		cursor:pointer;
-		background:rgba(0,0,0,0.4);
-	}
-	h2.headerBoxText{
-			justify-content: center;
-	}
-	h2.headerBoxText strong{
-		padding:0 20px;
-	}
-	body> header nav.active> span.shadow{
-		z-index:100;
-		opacity:1;
-	}
-	body > section .schoolBox .top .leftBlock .bottomLine{
-			width: 90vw;
-		margin-left: 3%;
-	}
-	body > section .infoBox{
-		width: 96%;
-	}
-	@media all and (max-width:920px){
-	body > header nav ul li:first-child a{
+}
+body> header nav.active> span.shadow:hover{
+	cursor:pointer;
+	background:rgba(0,0,0,0.4);
+	
+	
+}
+h2.headerBoxText{
+		justify-content: center;
+}
+h2.headerBoxText span{
+	padding:0 20px;
+}
+body> header nav.active> span.shadow{
+	z-index:100;
+	opacity:1;
+}
+body > section .schoolBox .top .leftBlock .bottomLine{
+	    width: 90vw;
+    margin-left: 3%;
+}
+@media all and (max-width:920px){
+	body > header nav ul li.home a{
 		padding:12px 7px;
 	}
 	body > header nav ul li a{
@@ -613,7 +601,6 @@ body> header nav.active> a.mobileMenu strong{
 	}
 	body > section .infoBox .leftBlock{
 		padding-bottom:15px;
-		padding-right:0;
 	}
 	body > section .infoBox .flexBlock{
 		flex-direction: column;
@@ -645,19 +632,14 @@ body> header nav.active> a.mobileMenu strong{
 		display:block;
 		padding:25px 0;
 	}
-	nav ul.flexBlock a:hover,
-	body > header nav ul li.active a{
+	nav ul.flexBlock a:hover{
 		background:#f7d137;
-		color: #0f3794;
 	}
-	body > header nav ul li.active a{
-		font-weight: 700;
-	}
-	body > header nav ul li:first-child a{
+	body > header nav ul li.home a{
 		font-size:18px;
 		padding:25px 0;
 	}
-	body > header nav ul li:first-child a:before{
+	body > header nav ul li.home a:before{
 		display:none;
 	}
 	body > header nav ul li+li{
@@ -671,7 +653,6 @@ body> header nav.active> a.mobileMenu strong{
 		background:#4a4a4a;
 	}
 	nav.active ul.flexBlock{
-		background: rgba(8, 16, 24, 0.9);
 		display:block;
 		opacity:1;
 		z-index:101;
@@ -681,7 +662,7 @@ body> header nav.active> a.mobileMenu strong{
 		-ms-transform: translateY(0px);
 		transform: translateY(0px);
 	}
-	body > header nav ul li:first-child a{
+	body > header nav ul li.home a{
 		margin:12px 0px;
 	}
 	body > header nav ul li a{
@@ -693,7 +674,7 @@ body> header nav.active> a.mobileMenu strong{
 	body > header nav ul li a{
 		display:none;
 	}
-	body > header nav > strong.shadow{
+	body > header nav > span.shadow{
 		position:fixed;
 		display:block;
 		opacity:0;
@@ -704,11 +685,11 @@ body> header nav.active> a.mobileMenu strong{
 		top:0;
 		bottom:0;
 	}
-	body > header nav.active > strong.shadow{
+	body > header nav.active > span.shadow{
 		z-index:100;
 		opacity:1;
 	}
-	body > header nav.active > strong.shadow:hover{
+	body > header nav.active > span.shadow:hover{
 		background:rgba(0,0,0,0.35);
 		cursor:pointer;
 	}
@@ -769,11 +750,10 @@ body> header nav.active> a.mobileMenu strong{
 	
 }
 @media all and (max-width:470px){
-	
 	body > section .schoolBox{
 		margin-top:0;
 	}
-	body > header .bottom .leftBlock ul{
+	body> header .bottom .leftBlock ul{
 	display:none;
 	}
 	body section .slider .tekst h1{
@@ -797,7 +777,7 @@ body> header nav.active> a.mobileMenu strong{
 	body> section .offerBox {
 		justify-content:column;
 	}
-	body > section .schoolBox .top .leftBlock .bottomLine h2.headerBoxText strong{
+	body > section .schoolBox .top .leftBlock .bottomLine h2.headerBoxText span{
 		font-size:5vw;
 	}
 	body > section .schoolBox .bottom .width50 p {
